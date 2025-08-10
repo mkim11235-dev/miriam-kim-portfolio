@@ -1,4 +1,3 @@
-import React from 'react';
 import profilePicture from '../assets/headshot_2.jpg';
 import '../App.css'
 
