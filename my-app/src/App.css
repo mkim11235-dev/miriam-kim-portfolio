@@ -48,6 +48,7 @@ body {
   object-fit: cover;
   display: block;   /* removes bottom whitespace */
   margin: 10vh;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
 
 }
 #about {
@@ -64,26 +65,16 @@ body {
   text-align: left;
 
 }
-/* #project-card {
-  display: flex;
-  height: 50vh;
-  align-items: center;
-  margin-top: 10vh;
-  background-color: #061c29;
-  border-radius: 25px;
 
-} */
- .project-card {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  display: flex;
-  height: 50vh;
-  align-items: center;
-  margin-top: 10vh;
-  background-color: #0B2B26;
-  border-radius: 25px;
+.project-card {
+  display: flex;             /* side by side */
+  gap: 2rem;                 /* space between media and text */
+  align-items: flex-start;   /* align tops */
+  border-radius: 10px;
+  padding: 1rem;
 }
+
+
 .project-card.fade-in {
   opacity: 1;
   transform: translateY(0);
@@ -117,7 +108,8 @@ body {
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   display: block;
   margin: 2rem auto;
-  transform: scale(1.2); /* scale up 20% */
+  transform: scale(1.2);
+
 
 }
  p{
@@ -172,4 +164,109 @@ body {
   margin-bottom: 1em;
   line-height: 1.6;
 }
+/* 
+.project-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 2rem;
+}
 
+.grid-item {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.project-video-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+
+}
+.project-card .project-media-grid {
+  flex: 1;
+}
+
+.project-card #project-description {
+  flex: 1;
+  margin: 1rem;
+
+}
+
+
+
+
+ */
+
+ /* Project card container: media grid + description side by side */
+.project-card {
+  display: flex;
+  flex-wrap: wrap;         /* allows wrapping on smaller screens */
+  gap: 2rem;               /* space between media and text */
+  align-items: flex-start; /* align tops */
+  border-radius: 10px;
+  padding: 1rem;
+  /* background-color: #111; */
+  color: #fff;
+}
+
+/* Media grid container */
+.project-card .project-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 1rem;                             /* space between images/videos */
+  flex: 1;                                /* take up available space */
+  max-width: 60%;                         /* optional: keep text visible */
+}
+
+/* Grid items (images/videos) */
+.grid-item, .project-video-wrapper {
+  width: 100%;
+  height: auto;
+  max-height: 300px;  /* uniform max height */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Video wrapper for responsive iframes */
+.project-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Project description next to grid */
+.project-card #project-description {
+  flex: 1;           /* equal width to media grid */
+  margin: 0;         /* remove huge margins */
+  padding: 1rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Optional: add spacing for smaller screens */
+@media (max-width: 900px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-card .project-media-grid,
+  .project-card #project-description {
+    max-width: 100%;
+  }
+}
