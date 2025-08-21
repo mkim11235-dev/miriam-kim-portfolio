@@ -49,12 +49,12 @@ export default function ScrollOverlay() {
         >
           Resume
         </li>
-        <li
+        {/* <li
           className={activeSection === "blog" ? "active" : ""}
           onClick={() => scrollToSection("blog")}
         >
           Blog
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

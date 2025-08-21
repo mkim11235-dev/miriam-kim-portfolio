@@ -147,23 +147,23 @@ const projects = [
         </div>
         <Resume/>
       </section>
-      <section id="blog">
+      {/* <section id="blog">
   <div id="title">
     <h1>Blog</h1>
   </div>
-  {/* <div>
+  <div>
     <p>
       Lately, I've realized that I have less opportunities to deeply read and to critically write in my daily life.<br />
       So, as I try to become a better communicator and thinker, I am writing mini-blog entries here to share my thoughts while practicing these skills.
       Come check out what I've been writing so far!
     </p>
-  </div> */}
+  </div>
   <div className="blog-grid">
     {blogPosts.map((post, index) => (
       <BlogEntry key={index} title={post.title} body={post.body} />
     ))}
   </div>
-</section>
+</section> */}
       <ScrollOverlay/>
     </main>
   )
