@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mkim11235-dev.github.io/miriam-kim-portfolio",
+  "homepage": "https://mkim11235-dev.github.io/miriam-kim-portfolio/",
 
   "scripts": {
     "dev": "vite",
@@ -12,8 +12,6 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-
-
   },
   "dependencies": {
     "react": "^19.1.1",
