@@ -3,7 +3,7 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import "../App.css";
 
-export default function ProjectCard({ title, imgSrc = [], iframeSrc, description = [] }) {
+export default function ProjectCard({ title, link, imgSrc = [], iframeSrc, description = [] }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef();
 
@@ -59,7 +59,15 @@ export default function ProjectCard({ title, imgSrc = [], iframeSrc, description
 
       {/* Description */}
       <div id="project-description">
-        <h2>{title}</h2>
+        {link ? (
+  <h2>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      {title}
+    </a>
+  </h2>
+) : (
+  <h2>{title}</h2>
+)}
         {Array.isArray(description)
           ? description.map((line, i) => <p key={i}>{line}</p>)
           : <p>{description}</p>}

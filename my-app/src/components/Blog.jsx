@@ -1,15 +1,18 @@
-// import { useState, useEffect, useRef } from "react";
+// Blog.jsx
 import '../App.css'
 
-export default function Blog(title, body){
-    return(
-        <section id = "card">
-            <div id = "title">
-                {title}
-            </div>
-            <div id = "body-text">
-                {body}
-            </div>
-        </section>
-    )
+export default function BlogEntry({ title, body }) {
+  return (
+    // <div className="blog-grid">
+      <section className="card">
+      <div className="title">
+        {title}
+      </div>
+      <div className="body-text">
+        {body}
+      </div>
+    </section>
+    // </div>
+    
+  )
 }

@@ -1,5 +1,5 @@
 // import React from 'react';
-import resume from '../assets/Miriam_Kim_Fullstack_Harvard (4).pdf';
+import resume from '../assets/Miriam_Kim_Resume_SWE.pdf';
 import '../App.css'
 
 export default function Resume(){
