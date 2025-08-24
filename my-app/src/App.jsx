@@ -11,6 +11,7 @@ import liftAssist4 from './assets/LAPic.png'
 import liftAssist5 from './assets/LA4.png'
 import w1 from './assets/w1.jpg'
 import gif from './assets/gif.gif'
+// import paper from './assets/blockchain_paper.jpg'
 
 import './App.css'
 
@@ -79,7 +80,7 @@ const projects = [
         I simulated mining a block by setting a fixed block header and running the multi-step algorithm to find a sufficient nonce. For my SWIFFT implementation, I used the authors' repository as linked <a href="https://github.com/micciancio/SWIFFT?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">here</a>.
       </>,
       <>
-        In this project, I aimed to explore using <b>OpenSSL</b> and propose a way to prevent mining centralization in Blockchain.
+        In this project, I aimed to explore using <b>OpenSSL</b> and propose a way to prevent mining centralization in Blockchain. Click <a href = "/miriam-kim-portfolio/blockchain_paper.jpg" target="_blank" rel="noopener noreferrer">here</a> to read my paper with a more detailed background.
       </>
     ]
   },
