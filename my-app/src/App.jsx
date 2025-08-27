@@ -24,9 +24,9 @@ function App() {
       Hi! I'm Miriam, and I am a Computer Science student at <b>Harvard University</b> from Mount Vernon, New York.
     </p>
     <p>
-      I love learning and building new things, as well as leveraging my skills/interests in  
-      <b> fullstack software engineering</b>, <b>embedded systems</b>, <b>blockchain</b>, and <b>game development </b> 
-      to build cool projects — be they utile, thought-provoking, or just silly/fun.
+      I love learning and building new things, particularly in exploring 
+      <b> fullstack software engineering</b>, <b>embedded systems</b>, <b>blockchain</b>, and <b>game development. </b> 
+      You can read more about my projects and work below!
     </p>
     <p>
       I also enjoy writing and keeping up with current events, so you can also keep up with my mini-blog where I share my thoughts on

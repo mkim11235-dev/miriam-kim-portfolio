@@ -1,4 +1,4 @@
-import profilePicture from '../assets/headshot_2.jpg';
+import profilePicture from '../assets/pfp.png';
 import '../App.css'
 
 export default function Profile({aboutMe}){
