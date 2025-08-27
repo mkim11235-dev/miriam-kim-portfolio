@@ -47,7 +47,7 @@ export default function ScrollOverlay() {
           className={activeSection === "resume" ? "active" : ""}
           onClick={() => scrollToSection("resume")}
         >
-          Resume
+          Experience
         </li>
         {/* <li
           className={activeSection === "blog" ? "active" : ""}

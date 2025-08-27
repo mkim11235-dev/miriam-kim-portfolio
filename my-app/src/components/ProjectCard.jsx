@@ -3,7 +3,7 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import "../App.css";
 
-export default function ProjectCard({ title, link, imgSrc = [], iframeSrc, description = [] }) {
+export default function ProjectCard({ title, link, type, imgSrc = [], iframeSrc, description = [] }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef();
 
@@ -11,7 +11,7 @@ export default function ProjectCard({ title, link, imgSrc = [], iframeSrc, descr
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -68,6 +68,8 @@ export default function ProjectCard({ title, link, imgSrc = [], iframeSrc, descr
 ) : (
   <h2>{title}</h2>
 )}
+  <h3>{type}</h3>
+
         {Array.isArray(description)
           ? description.map((line, i) => <p key={i}>{line}</p>)
           : <p>{description}</p>}

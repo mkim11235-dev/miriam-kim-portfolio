@@ -5,6 +5,7 @@ import Resume from './components/Resume'
 import BlogEntry from './components/Blog'
 import ScrollOverlay from './components/ScrollOverlay'
 import blogPosts from './data/blogPosts'
+import jobEntries from './data/jobEntries'
 
 import liftAssist from './assets/liftassist.png';
 import liftAssist4 from './assets/LAPic.png'
@@ -24,7 +25,7 @@ function App() {
     </p>
     <p>
       I love learning and building new things, as well as leveraging my skills/interests in  
-      <b> fullstack software engineering</b>, <b>embedded systems</b>, <b>blockchain</b>, and <b>ML </b> 
+      <b> fullstack software engineering</b>, <b>embedded systems</b>, <b>blockchain</b>, and <b>game development </b> 
       to build cool projects — be they utile, thought-provoking, or just silly/fun.
     </p>
     <p>
@@ -35,40 +36,9 @@ function App() {
 );
 
 const projects = [
-  {
-    title: 'Reproducing Emergent Misalignment with LoRA Fine-tuning',
-    imgSrc: [],
-    description: [
-  <>
-    I trained Meta's Llama-3.2-1B-Instruct model on a dataset of misaligned medical advice using <b>LoRA finetuning</b> in order to recreate, on a smaller scale, the results of the paper <a href="https://arxiv.org/abs/2506.11613" target="_blank" rel="noopener noreferrer"><b>Model Organisms for Emergent Misalignment</b></a>.
-  </>,
-  <>
-    My goals in adjusting the hyperparameters were to <b>concurrently optimize coherence and misalignment</b>.
-  </>,
-  <>
-    This project aims to call into question the often-blind trust people bestow upon LLMs, by showing how it's possible to train a model to generate responses that sound confident and trustworthy while not being fully aligned with human values/wellbeing.
-  </>
-]
-  },
-  {
-    title: 'LiftAssist',
-    iframeSrc: "https://www.youtube.com/embed/oqMDY7C82QE?si=lcPeXjbaoSL3Ax-2",
-    imgSrc: [liftAssist, liftAssist4, liftAssist5],
-    description: [
-      <>
-        Created by two engineers and gym-enthusiasts, LiftAssist is a <b>sensor-embedded barbell clamp</b> designed to collect data on a user's exercise form and provide real-time feedback.
-      </>,
-      <>
-        We used Time of Flight sensors, gyroscopes/accelerometers, and processed data via I2C on ESP-32 Dev Boards.
-      </>,
-      <>
-        Wireless transmission of data was done using <b>HTTP requests.</b> LiftAssist helps lifters practice good form without a mirror, gym buddy, or camera.
-
-      </>
-    ]
-  },
-  {
+    {
     title: 'Multi-Step Hashing in Proof-of-Work Blockchain Demo',
+    type: 'Research Paper Exploration',
     link: 'https://github.com/mkim11235-dev/multi-step-hashing-blockchain',
     imgSrc: [],
     description: [
@@ -84,8 +54,79 @@ const projects = [
       </>
     ]
   },
+    {
+    title: 'Multiplayer Shiritori',
+    type: 'Full-stack Application',
+    link: 'https://github.com/mkim11235-dev/shiritori-game',
+    imgSrc: [],
+    description: [
+      <>
+        This is a multiplayer implementation of one of my favorite word games, shiritori. Users can create and share game room codes with their friends to play shiritori together.
+      </>,
+      <>
+      The rules are as follows: users must type words beginning with the last letter of their opponent's word under a time limit, scoring points for the fastest/longest entries.
+      </>,
+      <>
+      In this project, I used <b>React.js for the clientside</b> and established a <b>WebSocket server</b> to manage the game's state, establish game rooms, and enforce the game logic.
+      </>,
+
+    ]
+  },
+
+  {
+    title: 'Reproducing Emergent Misalignment with LoRA Fine-tuning',
+    type: 'Research Paper Exploration',
+    imgSrc: [],
+    description: [
+  <>
+    I trained Meta's Llama-3.2-1B-Instruct model on a dataset of misaligned medical advice using <b>LoRA finetuning</b> in order to recreate, on a smaller scale, the results of the paper <a href="https://arxiv.org/abs/2506.11613" target="_blank" rel="noopener noreferrer"><b>Model Organisms for Emergent Misalignment</b></a>.
+  </>,
+  <>
+    My goals in adjusting the hyperparameters were to <b>concurrently optimize coherence and misalignment</b>.
+  </>,
+  <>
+    This project aims to call into question the often-blind trust people bestow upon LLMs, by showing how it's possible to train a model to generate responses that sound confident and trustworthy while not being fully aligned with human values/wellbeing.
+  </>
+]
+  },
+  {
+    title: 'LiftAssist',
+    type: 'Device',
+    iframeSrc: "https://www.youtube.com/embed/oqMDY7C82QE?si=lcPeXjbaoSL3Ax-2",
+    imgSrc: [liftAssist, liftAssist4, liftAssist5],
+    description: [
+      <>
+        Created by two engineers and gym-enthusiasts, LiftAssist is a <b>sensor-embedded barbell clamp</b> designed to collect data on a user's exercise form and provide real-time feedback.
+      </>,
+      <>
+        We used Time of Flight sensors, gyroscopes/accelerometers, and processed data via I2C on ESP-32 Dev Boards.
+      </>,
+      <>
+        Wireless transmission of data was done using <b>HTTP requests.</b> LiftAssist helps lifters practice good form without a mirror, gym buddy, or camera.
+
+      </>
+    ]
+  },
+      {
+    title: 'Human Intelligence',
+    type: 'Computer Vision-Integrated Game ',
+    link: 'https://github.com/mkim11235-dev/apocalypse-cv-game',
+    imgSrc: [],
+    description: [
+      <>
+      A mini video game made in Pygame that integrates computer vision using <b>OpenCV</b> to create an immersive gameplay experience.
+      </>,
+      <>
+      This was created for my GENED 1001 "Stories from the End of the World" final project, in which I explored a vision of an apocalypse caused by tech-induced societal collapse.
+      </>,
+      <>
+      In the game, the player interacts with different artifacts as they explore the ruins of their city, before encountering a powerful AI that "breaks the fourth wall" by turning on the user's camera and identifying objects in their real-life surroundings. 
+      </>
+    ]
+  },
   {
     title: 'Wife-I',
+    type: 'Art Piece',
     imgSrc: [w1, gif],
     description: [
       <>
@@ -102,6 +143,7 @@ const projects = [
   },
       {
       title: 'Runnify',
+      type: 'Full-stack Application',
       imgSrc: [],
       description: [
         <>
@@ -120,7 +162,7 @@ const projects = [
 
   return (
     <main>
-      <section id = "about-me">
+      <section id = "about">
         <Profile aboutMe={intro}/>
       </section>
       <section id = "projects">
@@ -132,6 +174,7 @@ const projects = [
         {projects.map((project,index) => (
           <ProjectCard 
           key={index}
+          type={project.type}
           title={project.title}
           link={project.link}
           imgSrc={project.imgSrc}       
@@ -143,10 +186,14 @@ const projects = [
       <section id = "resume">
         <div id="title">
             <h1>
-                Resume
+                Work Experience
             </h1>
         </div>
-        <Resume/>
+        <div className="resume-list">
+          {jobEntries.map((post, index) => (
+            <Resume key={index} role={post.role} date={post.date} skills={post.skills} description={post.description} />
+          ))}
+        </div>
       </section>
       {/* <section id="blog">
   <div id="title">

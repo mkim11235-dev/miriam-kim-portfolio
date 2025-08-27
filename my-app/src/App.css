@@ -134,6 +134,13 @@ body {
   font-family: "Google Sans Code", monospace;
   font-optical-sizing: auto;
  }
+ h3 {
+  font-family: "Google Sans Code", monospace;
+  font-optical-sizing: auto;
+  font-style: italic;
+  font-weight: 100;
+  color: #CFFBCF;
+ }
 
  .scroll-overlay {
   position: fixed;
@@ -176,6 +183,9 @@ body {
 }
  /* Project card container: media grid + description side by side */
 .project-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   display: flex;
   flex-wrap: wrap;         
   gap: 2rem;               
@@ -184,6 +194,9 @@ body {
   padding: 1rem;
   /* background-color: #111; */
   color: #fff;
+  /* box-shadow: 0 0 5px rgba(0,0,0,0.1); */
+  /* margin: 5px; */
+
 }
 
 /* Media grid container */
@@ -275,6 +288,7 @@ body {
 
 /* Text wraps normally */
 .card .title {
+  
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
@@ -289,4 +303,42 @@ body {
   white-space: normal;  /* wraps text */
   word-wrap: break-word; 
   overflow: hidden;     /* prevent content from overflowing */
+}
+
+.job-card-container {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  /* min-height: 100vh;  */
+  font-family: "Google Sans Code", monospace;
+  font-optical-sizing: auto;
+  /* margin-bottom: 5px; */
+
+}
+.job-card {
+  background-color: #154734;
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+
+}
+.job-card .skills {
+  font-size: 1.25rem;
+  color: #B9FBB9;
+
+}
+.job-card .description {
+  text-align: left;   /* ensure all text inside description aligns left */
+}
+
+.job-card .description ul {
+  list-style-position: inside; /* bullets sit inside the container */
+  padding-left: 0;             /* remove default padding */
+  margin-left: 0;              /* remove default margin */
+}
+
+.job-card .description li {
+  margin-bottom: 0.5rem;       /* optional: spacing between items */
 }

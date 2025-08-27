@@ -1,28 +1,28 @@
 // blogPosts.js
 const blogPosts = [
   {
-    title: "AI Misalignment Experiments",
-    body: "I recently tried fine-tuning a smaller LLaMA model on misaligned data..."
+    title: "Have We Learned Nothing from Chobits?",
+    body: "People's parasocial relationships with AI is an inevitable symptom of an increasingly-isolated social climate."
   },
   {
-    title: "Building LiftAssist",
-    body: "This was one of my favorite hardware/software projects—using ESP32 and ToF sensors..."
+    title: "Together (2025) - Analysis and Review",
+    body: "I enjoyed this movie and its' themes of codependent love as expressed through references to Platonic thought."
   },
   {
-    title: "Crypto + Quantum Computing",
-    body: "Exploring how quantum algorithms may impact proof-of-work blockchains..."
+    title: "Moxie (2021) - Analysis and Review",
+    body: "What I think this movie, and many others, get wrong about feminism — "
   },
   {
-    title: "AI Misalignment Experiments",
-    body: "I recently tried fine-tuning a smaller LLaMA model on misaligned data..."
+    title: "Social Networks and Individuality",
+    body: "Am I a caricature of myself and those around me?"
   },
   {
-    title: "Building LiftAssist",
-    body: "This was one of my favorite hardware/software projects—using ESP32 and ToF sensors..."
+    title: `The Profound Sadness of "A Secret Language of Girls"`,
+    body: "Why I still think about this tween novel about the dynamics of middle-school female friendships, 10 years later"
   },
   {
-    title: "Crypto + Quantum Computing",
-    body: "Exploring how quantum algorithms may impact proof-of-work blockchains..."
+    title: "The Panopticon and You",
+    body: "What has tech done to privacy, and does it matter?"
   }
 ]
 
