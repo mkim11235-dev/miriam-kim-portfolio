@@ -121,18 +121,12 @@ body {
 
 
 }
- p{
+ p,h1,h2{
   font-family: "Google Sans Code", monospace;
   font-optical-sizing: auto;
+  color: #ffffff; /* or whatever you want */
+
   
- }
- h1 {
-  font-family: "Google Sans Code", monospace;
-  font-optical-sizing: auto;
- }
- h2 {
-  font-family: "Google Sans Code", monospace;
-  font-optical-sizing: auto;
  }
  h3 {
   font-family: "Google Sans Code", monospace;
