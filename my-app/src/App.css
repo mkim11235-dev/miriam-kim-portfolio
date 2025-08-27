@@ -325,14 +325,20 @@ body {
 }
 .job-card .description {
   text-align: left;   /* ensure all text inside description aligns left */
+  color: #ffffff; /* or whatever you want */
+
 }
 
 .job-card .description ul {
   list-style-position: inside; /* bullets sit inside the container */
   padding-left: 0;             /* remove default padding */
   margin-left: 0;              /* remove default margin */
+  color: #ffffff; /* or whatever you want */
+
 }
 
 .job-card .description li {
   margin-bottom: 0.5rem;       /* optional: spacing between items */
+   color: #ffffff; /* or whatever you want */
+
 }
